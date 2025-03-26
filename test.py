@@ -3,3 +3,5 @@ a = 50
 
 print("Training")
 print("RUB Branch")
+
+stu = 'hello'
