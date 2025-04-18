@@ -1,0 +1,8 @@
+git is version control system.
+git init
+git ignore file
+branch
+switch branch
+merge 
+delete
+GitHub remote repo

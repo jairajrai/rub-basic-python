@@ -1,0 +1,56 @@
+The execution of the Python program involves 2 Steps:
+Compilation
+Interpreter
+
+compilation
+The program is converted into byte code. The byte code instructions are created in the .pyc file. 
+The .pyc file is not explicitly created as Python handles it internally but it can be viewed with the following command:
+#python -m py_compile first.py
+-m and py_compile represent module and module name respectively. This module is responsible to generate .pyc file. The compiler creates a directory named  __pycache__ where it stores the first.cpython-38.pyc file.
+
+interpreter
+The next step involves converting the byte code (.pyc file) into machine code. This step is necessary as the computer can understand only machine code (binary code ie. 0's and 1's). Python Virtual Machine (PVM) first understands the operating system and processor in the computer and then converts it into machine code. Further, these machine code instructions are executed by processor and the results are displayed.
+
+a compiler known as Just In Time (JIT) is added to PVM. JIT compiler improves the execution speed of the Python program. This compiler is not used in all Python environments like CPython which is standard Python software.
+
+To execute the first.cpython-38.pyc we can use the following command:
+#python first.cpython-38.pyc
+
+To view the byte code of the file – first.py we can type the following command as :
+#python -m dis first.py
+
+The dis command is known as “disassembler” that displays the byte code in an understandable format.
+**********************************************************************************
+
+Compiler Vs Interpreter
+In the system both the compiler and interpreter are the same they convert high-level code to machine code. 
+The interpreter converts source code into the machine when the program runs in a system while a compiler converts the source code into machine code before the program runs in our system.
+
+compiler in C, C++, Java
+interpreter in Python, JavaScript, Ruby, PHP
+
+**********************************************************************************
+python2 vs python3
+
+Unicode support
+In Python 2, every single Unicode string has to be marked with a “u” prefix as it uses ASCII characters by default. By contrast, Python 3 stores strings as Unicode by default, which is more versatile than ASCII strings.
+
+#Python 2:
+>>> print type("Hello DataCamp!") # this is an ASCII string
+<type 'str'>
+
+>>> print type(u"Hello DataCamp!") # this is a Unicode string
+<type 'unicode'>
+
+#Python 3:
+>>> print(type("Hello DataCamp!")) # this is a Unicode string
+<class 'str'>
+
+Summary: Why Is This a Big Deal?
+Unicode handling in Python 3 is simpler and more robust.
+In Python 2, improper Unicode handling often caused "UnicodeDecodeError" or "UnicodeEncodeError".
+Python 3 eliminates these headaches by making Unicode the default string type.
+
+exception handling, try and catch
+itemiter,item
+
